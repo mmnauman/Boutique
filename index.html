@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playball&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            margin: 0px;
+            padding: 0px
+        }
+
+        body {
+            font-family: 'Oswald', sans-serif !important;
+            background-color: #ffffff;
+            /* background-image: url("data:image/svg+xml,%3Csvg width='60' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%23df8891' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E"); */
+
+        }
+        header nav{
+            background: url("./images/bgTop.jpg") no-repeat;
+            background-size: cover;
+        }
+
+        header,
+        .aboutMsg,
+        .cakesGallery,
+        .siteFeatures,
+        .subhead,
+        .about,
+        .contact,
+        footer {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 20px;
+            background: #fff;
+        }
+
+        header ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            background-color: rgba(219, 57, 171, 0.4);
+            align-items: center;
+            max-height: 60px;
+            padding: 0px 20px;
+            position: relative;
+        }
+
+        header li a {
+            color: white;
+            font-weight: bold;
+
+        }
+
+        header li a:hover {
+            color: gold;
+            text-decoration: none;
+        }
+
+        header ul h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            text-shadow: 0px 0px 2px white;
+        }
+
+        .aboutMsg {
+            width: 100%;
+            margin: 0px auto 0px auto;
+            text-align: center;
+            background: url(./images/bg3.jpg);
+            background-size: cover;
+            height: 100%;
+        }
+
+        .msgBody {
+            background: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            height: 300px;
+            display: grid;
+            color: #fff;
+            font-size: 1.5em;
+            align-content: center;
+            font-family: 'Oswald', sans-serif !important;
+        }
+
+
+
+        .cakesGallery {
+            width: 100%;
+        }
+
+        .cakesGallery .cakesGalleryInner {
+            height: 100%;
+            min-height: 500px;
+            width: calc(100% + 20px);
+            display: grid;
+            grid-template-columns: repeat(3, minmax(33%, 1fr));
+            align-items: stretch;
+        }
+
+        .cakesGallery .cakesGalleryInner img {
+            width: 100%;
+            max-height: 220px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px
+        }
+
+        .ABT_Cake {
+            text-align: center;
+            display: grid;
+            font-size: 1.4em;
+            background: #df8891;
+            /* background: #f5be8d; */
+            margin-right: 20px;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        .ABT_Cake h3 {
+            margin: 10px 0px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .siteFeatures {
+           
+            font-size: 8em;
+            position: relative;
+            align-content: stretch;
+            margin-bottom: 20px;
+            height: 350px;
+            align-items: center;
+          background:url("./images/bgTop.jpg") no-repeat;
+         
+          background-size: cover;
+          background-attachment: fixed;
+
+        }
+
+.siteFeaturesInner{
+   width: 100%; 
+   height: 100%;
+   display: grid;
+            grid-template-columns: repeat(3, 33.3%);
+            justify-content: center;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.4);
+}
+        .picsContainer {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .siteFeatures h3 {
+            font-size: 26px;
+            color: #000;
+            position: relative;
+            margin-top: 40px;
+            font-weight: bold;
+        }
+
+        .subhead {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            color: white;
+            background: #df8891;
+            padding: 20px 0px;
+            font-weight: bold;
+
+        }
+
+        .decor {
+            position: absolute;
+            right: -80px;
+            height: 400px;
+            bottom: -30px;
+        }
+
+        .decor img {
+            height: 100%;
+        }
+
+        #ABT_SLIDE,
+        #ABT_SLIDE img {
+            width: 100%;
+            max-height: 400px;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        /* About*/
+        .about,
+        .contact {
+            background-color: lightBlue;
+            height: 250px;
+            margin-top: 30px;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+
+
+
+        .contact .bioLeft {
+            border: unset;
+        }
+
+        .newNorms,
+        .footerNote {
+            width: 100%;
+            max-height: 300px;
+        }
+
+        .newNorms h3,
+        .footerNote h3 {
+            text-transform: uppercase;
+        }
+
+        .newNorms p,
+        .footerNote p {
+            padding-top: 50px;
+        }
+
+        .newNorms,
+        .ContactInfo {
+            border-right: 0.7px solid
+        }
+
+        .AboutSection {
+            display: grid;
+            grid-template-columns: 70% 30%;
+
+        }
+
+        .navBrand {
+            position: relative;
+            z-index: 9999;
+            top: 30px;
+        }
+
+        .navBrand img {
+            width: 150px
+        }
+
+
+
+        .navBrand_footer {
+            width: 200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .bioLeft {
+            padding-top: 20px;
+            border-right: 1px solid grey;
+        }
+
+        .bioSection .navBrand_footer img {
+            width: 100%;
+        }
+
+        .contact {
+            display: grid;
+            grid-template-columns: repeat(3, 33%);
+            margin-top: 250px;
+        }
+
+        .about:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            background: lightblue;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+            transform: skewY(14deg);
+            transform-origin: top left;
+        }
+
+        .contact {
+            background: #000;
+            color: #fff;
+        }
+
+        .contact:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            background: black;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+            transform: skewY(14deg);
+            transform-origin: top right;
+        }
+
+        .contactDetails {
+            display: flex;
+            grid-template-columns: 20% 80%;
+            grid-gap: 10px;
+            padding: 5px;
+        }
+
+        .contactDetails .contactIcon {
+            padding: 3px 3px;
+            border-radius: 4px;
+
+        }
+
+        .contactInfoDetails {
+            padding: 3px;
+
+        }
+
+        .AboutSection .bioLeft {
+            padding: 20px;
+            padding-top: 50px;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        @media screen and (max-width: 480px) {
+
+            h2 {
+                font-family: 'Playfair Display', serif;
+            }
+
+            header nav ul {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(100px, 1fr));
+                text-align: center;
+                padding: 0;
+            }
+
+            header nav ul li {
+                border-bottom: 1px solid grey;
+                padding: 10px;
+            }
+
+            .navBrand {
+                grid-column: span 2;
+            }
+
+            .about {
+                margin: 0;
+                height: auto;
+            }
+
+            .AboutSection {
+                grid-template-columns: 1fr;
+            }
+
+
+
+            .subhead {
+                text-align: center;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                padding-left: 15px
+            }
+
+            .subhead h2 {
+                font-size: 1.2em;
+            }
+
+            .contact {
+                margin: 0px;
+                height: auto;
+                background: #000;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .cakesGalleryInner {
+                grid-template-columns: 1fr !important;
+                font-size: 16px;
+            }
+
+            .ABT_Cake {
+                font-size: 1em;
+            }
+
+            .aboutMsg {
+                width: 100%;
+                margin: 0px auto 0px auto;
+                text-align: center;
+                background: url(./images/bg3.jpg);
+                background-size: 100% 100%;
+                height: 100%;
+            }
+
+            /* .picsContainer{
+    display: none
+} */
+
+            .picsContainer,
+            .picsContainer img {
+                width: 80px;
+                height: 80px;
+                margin: 0px;
+                font-size: 45px;
+
+            }
+
+            .picsContainer {
+                margin-bottom: 10px;
+                margin-left: 5px
+            }
+
+            .siteFeaturesInner {
+                display: flex;
+                flex-wrap: wrap;
+                height: auto;
+                font-weight: bold;
+                font-size: 16px;
+                justify-content: left;
+                margin-bottom: 0px;
+                align-items: flex-end;
+                color: #000;
+            }
+
+            .siteFeatures .section {
+                flex: 1 1 100%;
+                display: flex;
+                text-align: left;
+                justify-content: left;
+                margin: 5px 0px;
+                border-bottom: 1px solid lightblue;
+
+            }
+
+            .siteFeatures h3 {
+                box-sizing: border-box;
+                font-size: 16px;
+                color: #000;
+                position: relative;
+                bottom: 10px;
+                margin-left: 20px;
+
+            }
+
+            .decor {
+                display: none
+            }
+
+            header ul {
+                max-height: unset;
+                height: auto;
+            }
+
+            .newNorms p,
+            .footerNote p {
+                padding-top: 10px;
+            }
+
+            .newNorms,
+            .ContactInfo {
+                border-right: unset;
+                border-bottom: .8px solid
+            }
+
+            .navBrand {
+                top: 0px;
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="mainNavigation">
+            <ul>
+                <li> <a href="#cakes"><i class="fas fa-birthday-cake"></i> CAKES</a></li>
+                <li><a href="#features">FEATURES</a></li>
+                <li class='navBrand'>
+                    <h1><img src="./images/Mother's Touch Logo.png" alt=""></h1>
+                </li>
+                <li><a href="#contact"><i class="far fa-address-card"></i> CONTACT</a> </li>
+                <li><a href="#about"> <i class="far fa-id-card"></i> ABOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="aboutMsg">
+
+        <div id="ABT_SLIDE" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#ABT_SLIDE" data-slide-to="0" class="active"></li>
+                <li data-target="#ABT_SLIDE" data-slide-to="1"></li>
+                <li data-target="#ABT_SLIDE" data-slide-to="2"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!-- <div class="msgBody">
+        <h2>A Mother's Touch in Every Bite</h2>
+    </div> -->
+                    <img src="./images/bg2.jpg" alt="A Bakery that cares" />
+                    <div class="carousel-caption">
+                        <h3>A Mother's Touch in Every Bite</h3>
+                        <p>Premium Cakes, Hygenic</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/bg2.jpg" />
+                    <div class="carousel-caption">
+                        <h3>We Care</h3>
+                        <p>New Cakes are Coming</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/bg3.jpg">
+                    <div class="carousel-caption">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#ABT_SLIDE" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#ABT_SLIDE" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+
+
+    </div>
+    <div class="subhead">
+        <h2>WE ARE EXCITED TO OFFER:</h2>
+    </div>
+
+    <div class="siteFeatures">
+        <div class="siteFeaturesInner">
+        <div class="section">
+            <div class="picsContainer">
+                <i class="fas fa-truck"></i>
+            </div>
+
+            <h3>FREE SHIPPING</h3>
+        </div>
+        <div class="section">
+            <div class="picsContainer">
+                <!-- <i class="fa fa-shopping-cart" aria-hidden="true"></i> -->
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+
+            <h3>TAKE AWAY</h3>
+        </div>
+        <div class="section">
+            <div class="picsContainer">
+                <!-- <img src="./images/freeDelivery.png" alt=""> -->
+                <img src="./images/COD.png" alt="" width='200'>
+            </div>
+
+            <h3>CASH ON DELIVERY</h3>
+        </div>
+    </div>
+        
+    </div>
+
+
+
+    <div class="cakesGallery" id='cakes'>
+        <div class="cakesGalleryInner">
+            <div class="ABT_Cake">
+                <div class="img">
+                    <img src="./images/gcake7.jpeg" alt="">
+                </div>
+                <div class="CakeBody">
+                    <h3>
+                        CAKE NAME
+
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellendus autem id fugit
+                        quos sapiente, praesentium totam dolor excepturi libero eos. Dolore id cum asperiores
+                        repudiandae amet accusamus consectetur delectus.</p>
+                </div>
+
+                <div class="cakeFooter">
+                    <!-- Link To Be Added -->
+                </div>
+            </div>
+            <div class="ABT_Cake">
+                <div class="img">
+                    <img src="./images/gCake1.jpg" alt="">
+                </div>
+                <div class="CakeBody">
+                    <h3>
+                        CAKE NAME
+
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellendus autem id fugit
+                        quos sapiente, praesentium totam dolor excepturi libero eos. Dolore id cum asperiores
+                        repudiandae amet accusamus consectetur delectus.</p>
+                </div>
+
+                <div class="cakeFooter">
+
+                </div>
+            </div>
+            <div class="ABT_Cake">
+                <div class="img">
+                    <img src="./images/gCake3.jpg" alt="">
+                </div>
+                <div class="CakeBody">
+                    <h3>
+                        CAKE NAME
+
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellendus autem id fugit
+                        quos sapiente, praesentium totam dolor excepturi libero eos. Dolore id cum asperiores
+                        repudiandae amet accusamus consectetur delectus.</p>
+                </div>
+
+                <div class="cakeFooter">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="about" id="about">
+        <h2>ABOUT Mother's Touch</h2>
+        <div class="AboutSection">
+            <div class="bioSection bioLeft">
+                <p> <strong>URUSA AIMAN</strong> </strong>: The women behind this startup. She is a graduate and a
+                    Mother. She is a house wife. Being a mother she always complained regarding the cleanliness and
+                    quality of the cakes that are available outside so she thought to start her own startup. Her moto is
+                    to provide Hygenic, Premium Quality Cakes in low price. </p>
+            </div>
+            <div class="bioSection bioRight">
+                <div class='navBrand_footer'>
+                    <img src="./images/Mother's Touch Logo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contact" id='contact'>
+        <div class="ContactInfo">
+            <h3> CONTACT</h3>
+            <div class="bioSection bioLeft">
+                <div class="contactDetails">
+                    <div class="contactIcon">
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    <div class="contactInfoDetails">
+                        mmnauman786@gmail.com
+                    </div>
+                </div>
+
+                <div class="contactDetails">
+                    <div class="contactIcon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contactInfoDetails">
+                        +91 8867810100
+                    </div>
+                </div>
+
+
+                <div class="contactDetails">
+                    <div class="contactIcon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contactInfoDetails">
+                        Behind Bahmani Hospital,
+                        Kalaburagi, India
+                    </div>
+                </div>
+
+
+                <div class="contactDetails">
+                    <div class="contactIcon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="contactInfoDetails">
+                        https://www.allbloggertricks.com
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="newNorms">
+            <h3> Guidelines</h3>
+            <p> We are strictly following and complying all the FSSAI COVID-19 Guidelines.</p>
+        </div>
+
+        <div class="footerNote">
+            <h3> Note </h3>
+            <p> Customized Orders can take time. Please Order 2 days before the event.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="credits">
+            <p>Made With <i class="fas fa-heart"></i> in India By MM Nauman, <a
+                    href="https://www.allbloggertricks.com">All Blogger Tricks</a></p>
+        </div>
+    </footer>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
